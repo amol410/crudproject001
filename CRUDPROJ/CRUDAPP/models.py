@@ -13,3 +13,10 @@ class StudentInfo(models.Model):
 class Salary_of_Employee(models.Model):
     name = models.CharField(max_length=50)
     salary = models.IntegerField()
+
+class UserClass(models.Model):
+    username = models.CharField(max_length=50, unique=True)
+    password = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.username

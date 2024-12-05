@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import StudentInfo, Salary_of_Employee
+from .models import StudentInfo, Salary_of_Employee, UserClass
 
 # Register your models here.
 # admin.site.register(StudentInfo)
@@ -13,3 +13,5 @@ class Salary_of_EmployeeAdmin(admin.ModelAdmin):
     list_display = ["name", "salary"]
 
 admin.site.register(Salary_of_Employee, Salary_of_EmployeeAdmin)
+
+admin.site.register(UserClass)
